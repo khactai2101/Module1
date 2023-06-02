@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My website</title>
+    <style>
+      .logo img {
+        height: 50px;
+        border-radius: 20%;
+      }
+      .navbar {
+        justify-content: space-between;
+        display: flex;
+        padding: 10px 50px 10px 50px;
+        background-color: pink;
+        border-radius: 0%;
+      }
+      .navbar-menu a:hover {
+        background-color: rgb(235, 158, 171);
+        color: white;
+        border-radius: 20px;
+      }
+      .navbar-menu {
+        display: flex;
+        gap: 10px;
+        list-style: none;
+      }
+      .navbar-menu a {
+        font-size: 15px;
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 10px;
+        background-color: pink;
+        font-size: 20px;
+      }
+      .section-title a {
+        transition: 0.3s ease-in-out;
+        text-decoration: none;
+      }
+      .section-title a:hover {
+        background-color: rgb(168, 110, 120);
+        border-radius: 30px;
+        padding: 10px;
+      }
+      .main-content {
+        background-color: pink;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo"><img src="./logo/unnamed.png" alt="" /></div>
+        <ul class="navbar-menu">
+          <li><a href="#about">About</a></li>
+          <li><a href="#music">Music</a></li>
+          <li><a href="#video">Video</a></li>
+          <li><a href="#profile">Profile</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main-content">
+      <section id="about">
+        <h3 class="section-title">
+          <a href="./page/about.html">About</a>
+        </h3>
+        <div class="section-content">Đây là nội dung của tôi</div>
+      </section>
+
+      <section id="music">
+        <h3 class="section-title"><a href="./page/music.html">Music</a></h3>
+        <div class="section-content">Đây là nội dung của tôi</div>
+      </section>
+
+      <section id="video">
+        <h3 class="section-title"><a href="./page/video.html">Video</a></h3>
+        <div class="section-content">Đây là nội dung của tôi</div>
+      </section>
+
+      <section id="profile">
+        <h3 class="section-title"><a href="./page/profile.html">Profile</a></h3>
+        <div class="section-content">Đây là nội dung của tôi</div>
+      </section>
+
+      <section id="contact">
+        <h3 class="section-title"><a href="./page/contact.html">Contact</a></h3>
+        <div class="section-content">Đây là nội dung của tôi</div>
+      </section>
+    </main>
+    <footer>&#169; RikkeiAcademy</footer>
+  </body>
+</html>
