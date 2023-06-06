@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    table {
+      width: 100%;
+    }
+    table,
+    th,
+    td {
+      /* sai mau` */
+      border: 1px solid white;
+      border-collapse: collapse;
+    }
+    th,
+    td {
+      padding: 5px;
+      text-align: left;
+    }
+    tr:nth-child(even) {
+      background-color: #eee;
+    }
+    tr:nth-child(odd) {
+      background-color: #fff;
+    }
+    th {
+      background-color: black;
+      color: white;
+    }
+  </style>
+
+  <body>
+    <table border="1">
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Age</th>
+      </tr>
+      <tr>
+        <td>Jill</td>
+        <td>Smith</td>
+        <td>50</td>
+      </tr>
+      <tr>
+        <td>Eve</td>
+        <td>Jackson</td>
+        <td>94</td>
+      </tr>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>80</td>
+      </tr>
+    </table>
+
+    <form>
+      <label>First name:</label><br />
+      <input type="text" name="first" value="Mickey" /><br />
+      <label>Last name:</label><br />
+      <input type="text" name="last" value="Mouse" /><br /><br />
+      <input type="submit" value="Submit" />
+    </form>
+    <br /><br /><br />
+    <form action="https://learn.rikkeiacademy.com/" method="get"></form>
+      <input type="text" name="input" />
+      <input type="submit" value="Tìm kiếm" />
+    </form>
+    <br><br><br>
+    <form action="https://learn.rikkeiacademy.com/">
+      <fieldset>
+          <legend>Personal information</legend>
+          <label>First name:</label><br />
+          <input type="text" name="firstName" value="Mickey" /><br />
+          <label>Last name:</label><br />
+          <input type="text" name="lastName" value="Mouse" /><br /><br />
+          <input type="submit" value="Tìm kiếm" />
+      </fieldset>
+   </form>
+   <form action="https://learn.rikkeiacademy.com/" method="get">
+    <label>Account:</label>
+    <input type="text" name="account" value="admin" /><br />
+    <label>Sở thích:</label><br />
+    <input name="travel" value="travel" type="radio" />Du lịch<br />
+    <input name="sport" name="sport" type="radio" />Thể thao<br />
+    <input name="cooking" name="cooking" type="radio" />Nấu ăn<br /><br />
+    <input type="submit" value="Submit" />
+ </form>
+ 
+  </body>
+</html>

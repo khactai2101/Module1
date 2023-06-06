@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Market Research Survey</title>
+    <style>
+      select {
+        width: 50%;
+      }
+      textarea {
+        width: 100%;
+      }
+      h4 {
+        margin: 30px 0 5px;
+      }
+      table#rate,
+      #rate tr,
+      #rate th,
+      #rate td {
+        border-collapse: collapse;
+        border: 1px solid;
+        text-align: center;
+      }
+      #rate tr td:first-child {
+        text-align: center;
+      }
+      .bg-grey {
+        background-color: grey;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header><h2>Market Research Survey</h2></header>
+    <form>
+      <article>
+        <h4>What is your age range?</h4>
+        <select name="age" id="age" name="age">
+          <option value="age-group-1">18-24</option>
+          <option value="age-group-2">25-34</option>
+          <option value="age-group-3">35-44</option>
+          <option value="age-group-4">45-54</option>
+          <option value="age-group-5">55-64</option>
+          <option value="age-group-6">65+</option>
+        </select>
+      </article>
+      <article>
+        <h4>What is your yearly income range?</h4>
+        <select name="income" id="income" name="income">
+          <option value="income-group-1">$0 - $25,0000</option>
+          <option value="income-group-2">$25,000 - $50,000</option>
+          <option value="income-group-3">$50,000 - $75,000</option>
+          <option value="income-group-4">$75,000 - $100,000</option>
+          <option value="income-group-5">$100,000</option>
+        </select>
+      </article>
+
+      <article>
+        <h4><label>Gender</label></h4>
+        <input type="radio" name="gender" id="male" value="male" />
+        <label for="male">Male</label>
+        <br />
+
+        <input type="radio" name="gender" id="female" value="female" />
+        <label for="female">Female</label>
+      </article>
+
+      <article>
+        <h4><label>which</label></h4>
+
+        <input type="checkbox" name="product1" id="product-1" />
+        <label for="product-1">Produc 1</label>
+        <br />
+
+        <input type="checkbox" name="product2" id="product-2" />
+        <label for="product-2">Produc 2</label>
+        <br />
+
+        <input type="checkbox" name="product3" id="product-3" />
+        <label for="product-3">Produc 3</label>
+        <br />
+      </article>
+
+      <article>
+        <h4><label>How ofen</label></h4>
+
+        <input type="radio" name="freequency" id="daily" value="daily" />
+        <label for="daily">Daily</label>
+        <br />
+        <input type="radio" name="freequency" id="weekly" value="weekly" />
+        <label for="weekly">Weekly</label>
+        <br />
+        <input type="radio" name="freequency" id="monthly" value="monthly" />
+        <label for="monthly">Monthly</label>
+        <br />
+      </article>
+
+      <article>
+        <h4><label>What would</label></h4>
+        <table>
+          <tr>
+            <td>$</td>
+            <td><input type="number" /></td>
+            <td>.</td>
+            <td><input type="number" /></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>Dollars</td>
+            <td></td>
+            <td>Cents</td>
+          </tr>
+        </table>
+      </article>
+
+      <article>
+        <h4>What features</h4>
+        <textarea name="suggest" cols="30" rows="10"></textarea>
+      </article>
+      <table id="rate">
+        <caption>
+          Please
+        </caption>
+        <tbody>
+          <tr class="bg-grey">
+            <th></th>
+            <th>Strongly Disagree</th>
+            <th>Disagree</th>
+            <th>Agree</th>
+            <th>Strongly Agree</th>
+          </tr>
+          <tr>
+            <td>Our products are high fairly</td>
+            <td><input type="radio" name="price-rate" /><br />1</td>
+            <td><input type="radio" name="price-rate" /><br />2</td>
+            <td><input type="radio" name="price-rate" /><br />3</td>
+            <td><input type="radio" name="price-rate" /><br />4</td>
+          </tr>
+
+          <tr class="bg-grey">
+            <td>Our products are high fairly</td>
+            <td><input type="radio" name="price-rate" /><br />1</td>
+            <td><input type="radio" name="price-rate" /><br />2</td>
+            <td><input type="radio" name="price-rate" /><br />3</td>
+            <td><input type="radio" name="price-rate" /><br />4</td>
+          </tr>
+          <tr>
+            <td>Our products are high fairly</td>
+            <td><input type="radio" name="price-rate" /><br />1</td>
+            <td><input type="radio" name="price-rate" /><br />2</td>
+            <td><input type="radio" name="price-rate" /><br />3</td>
+            <td><input type="radio" name="price-rate" /><br />4</td>
+          </tr>
+        </tbody>
+      </table>
+      <br />
+      <input type="submit" />
+    </form>
+  </body>
+</html>
