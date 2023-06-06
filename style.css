@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+h2,
+h3 {
+  color: orange;
+}
+
+#demo-descendanr-selector {
+  color: green;
+}
+#demo-descendanr-selector h3 {
+  color: red;
+}
+section > p {
+  color: pink;
+}
+section.test {
+  background-color: yellow;
+}
+article.test {
+  background-color: pink;
+}
+.test {
+  background-color: green;
+}
+.btn {
+  padding: 10px;
+  margin: 10px 50px;
+}

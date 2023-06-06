@@ -1,0 +1,32 @@
+h1 {
+  color: rgb(177, 177, 18);
+}
+#first p:nth-child(1) {
+  color: rgb(12, 153, 153);
+}
+#first p:nth-child(2) {
+  color: red;
+}
+#second {
+  background-color: rgb(208, 208, 19);
+  padding: 20px 10px 10px 10px;
+}
+#content {
+  width: 40%;
+  background-color: rgb(244, 233, 218);
+  padding: 5px 10px;
+  line-height: 30px;
+}
+#content h1 {
+  color: black;
+}
+.container {
+  width: 100%;
+  padding: 0 0 0 30%;
+}
+img {
+  max-width: 100%;
+}
+figure {
+  margin: 0;
+}
