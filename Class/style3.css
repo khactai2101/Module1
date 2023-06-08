@@ -1,0 +1,51 @@
+nav {
+  background-color: rgb(51, 46, 46);
+  border-radius: 8px;
+  padding: 2px;
+  height: 60px;
+  width: 30%;
+  cursor: pointer;
+}
+nav > ul {
+  padding-left: 0;
+}
+nav > ul > li {
+  display: inline-block;
+  color: white;
+  padding: 10px 15px;
+  border-right: 2px solid grey;
+
+  position: relative;
+}
+a {
+  text-decoration: none;
+}
+nav > ul > li:last-child {
+  border-right: none;
+}
+nav > ul > li:hover {
+  color: green;
+}
+a {
+  color: inherit;
+  font-weight: bold;
+}
+.fa-solid {
+  color: green;
+}
+nav > ul > li > ul {
+  display: none;
+  list-style: none;
+  position: absolute;
+  background-color: rgb(20, 18, 18);
+  top: 120%;
+  left: 0;
+  padding: 0;
+  border-radius: 0 0 5px 5px;
+}
+nav > ul > li:hover ul {
+  display: block;
+}
+nav > ul > li > ul > li a {
+  padding-right: 80px;
+}
