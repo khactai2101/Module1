@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid</title>
+    <style>
+      body {
+        display: grid;
+        gap: 10px;
+        column-gap: 50px;
+        /* phan chia bo cuc ma tran (co cot va dong) */
+
+        grid-template-areas:
+          "header header header"
+          "nav nav nav"
+          "aside section section"
+          "footer footer footer";
+      }
+      body > * {
+        border: 2px solid red;
+      }
+      header {
+        /* dat ten cho vung de parent set vi tri */
+        grid-area: header;
+        height: 50px;
+      }
+      nav {
+        grid-area: nav;
+        height: 50px;
+      }
+      aside {
+        grid-area: aside;
+      }
+      footer {
+        grid-area: footer;
+        height: 50px;
+      }
+      section {
+        grid-area: section;
+        display: grid;
+        /* phan chia bo cuc chi co cot */
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+      .card {
+        width: 500px;
+        height: 300px;
+        border: 1px solid green;
+      }
+    </style>
+  </head>
+  <body>
+    <header>header</header>
+    <nav>nav</nav>
+    <aside>aside</aside>
+
+    <section>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+    </section>
+    <footer>footer</footer>
+  </body>
+</html>

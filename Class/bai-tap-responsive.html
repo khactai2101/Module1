@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: pink;
+      }
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 50px;
+        padding: 20px;
+        text-align: center;
+      }
+      .item img {
+        width: 100%;
+        height: 200px;
+        border: 10px solid white;
+        object-fit: cover;
+      }
+      @media screen and (max-width: 1024px) {
+        .grid-container {
+          margin: 0;
+          padding: 10px;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          text-align: center;
+        }
+      }
+      @media screen and (max-width: 767px) {
+        .grid-container {
+          margin: 0;
+          padding: 10px;
+          display: grid;
+          grid-template-columns: 1fr;
+          text-align: center;
+          object-fit: cover;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="grid-container">
+      <div class="item">
+        <img
+          src="https://cdn.pixabay.com/photo/2023/05/28/13/15/helicopter-8023696_1280.jpg"
+          alt=""
+        />
+        <p>testitemitemitem</p>
+      </div>
+      <div class="item">
+        <img
+          src="https://cdn.pixabay.com/photo/2016/01/28/19/40/photography-1166895_1280.jpg"
+          alt=""
+        />
+        <p>testitemitemitem</p>
+      </div>
+      <div class="item">
+        <img
+          src="https://cdn.pixabay.com/photo/2023/05/28/13/15/helicopter-8023696_1280.jpg"
+          alt=""
+        />
+        <p>testitemitem</p>
+      </div>
+      <div class="item">
+        <img
+          src="https://cdn.pixabay.com/photo/2023/05/28/13/15/helicopter-8023696_1280.jpg"
+          alt=""
+        />
+        <p>testitemitem</p>
+      </div>
+      <div class="item">
+        <img
+          src="https://cdn.pixabay.com/photo/2023/05/28/13/15/helicopter-8023696_1280.jpg"
+          alt=""
+        />
+        <p>test</p>
+      </div>
+      <div class="item">
+        <img
+          src="https://cdn.pixabay.com/photo/2023/05/28/13/15/helicopter-8023696_1280.jpg"
+          alt=""
+        />
+        <p>test</p>
+      </div>
+      <div class="item">
+        <img
+          src="https://cdn.pixabay.com/photo/2023/05/28/13/15/helicopter-8023696_1280.jpg"
+          alt=""
+        />
+        <p>test</p>
+      </div>
+      <div class="item">
+        <img
+          src="https://cdn.pixabay.com/photo/2023/05/28/13/15/helicopter-8023696_1280.jpg"
+          alt=""
+        />
+        <p>test</p>
+      </div>
+      <div class="item">
+        <img
+          src="https://cdn.pixabay.com/photo/2023/05/28/13/15/helicopter-8023696_1280.jpg"
+          alt=""
+        />
+        <p>test</p>
+      </div>
+      <div class="item">
+        <img
+          src="https://cdn.pixabay.com/photo/2023/05/28/13/15/helicopter-8023696_1280.jpg"
+          alt=""
+        />
+        <p>test</p>
+      </div>
+      <div class="item">
+        <img
+          src="https://cdn.pixabay.com/photo/2023/05/28/13/15/helicopter-8023696_1280.jpg"
+          alt=""
+        />
+        <p>test</p>
+      </div>
+      <div class="item">
+        <img
+          src="https://cdn.pixabay.com/photo/2023/05/28/13/15/helicopter-8023696_1280.jpg"
+          alt=""
+        />
+        <p>test</p>
+      </div>
+    </section>
+  </body>
+</html>

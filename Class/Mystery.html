@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      * {
+      }
+      nav {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        height: 60px;
+        background-color: aqua;
+        align-items: center;
+      }
+      .logo a {
+        text-decoration: none;
+      }
+      nav ul {
+        display: flex;
+        gap: 20px;
+      }
+
+      nav ul li {
+        list-style-type: none;
+      }
+      nav ul li a {
+        text-decoration: none;
+      }
+      .fa-brands {
+        background-color: aliceblue;
+        border: 1px solid black;
+        border-radius: 10px;
+      }
+      .content {
+        padding: 40px 80px;
+      }
+      .menu {
+        width: 300px;
+
+        border: 1px solid black;
+        align-items: center;
+        background-color: rgb(30, 29, 29);
+      }
+      .sub-menu {
+        width: 100%;
+        height: 60px;
+        border-bottom: 1px solid black;
+        display: flex;
+        background-color: rgb(43, 43, 172);
+        justify-content: space-between;
+        align-items: center;
+      }
+      .menu a {
+        text-decoration: none;
+      }
+      .menu ul li {
+        list-style: none;
+        text-align: center;
+
+        margin-top: 20px;
+      }
+      .menu ul {
+        padding: 0;
+      }
+      .information {
+        text-align: center;
+      }
+      .information i {
+        width: 30px;
+
+        height: 30px;
+        background-color: white;
+        border-radius: 50%;
+        font-size: 25px;
+        padding: 2px 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <a href="#"><h1>MysteryCode</h1></a>
+      </div>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <ul>
+        <li>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </li>
+      </ul>
+    </nav>
+    <div class="content">
+      <div class="menu">
+        <div class="sub-menu">
+          <h3>MysteryCode</h3>
+          <i class="bx bx-menu"></i>
+        </div>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="information">
+          <i class="bx bxl-twitter"></i>
+          <i class="bx bxl-facebook-circle"></i>
+          <i class="bx bxl-youtube"></i>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
