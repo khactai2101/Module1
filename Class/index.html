@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Session- 08</title>
+  </head>
+  <body>
+    <h1>Learn basic Javascript</h1>
+    <script>
+      // chuc nang in ra ngoai man hinh
+
+      console.log("Javascript internal");
+
+      // hien thi duoi dang popup
+      //   alert("Hom nay toi moi hoc Javascript");
+      // xac nhan confirm thường là câu hỏi
+      //   confirm("Bạn có muốn học lập trình không?");
+      // hàm prompt() lấy dữ liệu từ người dùng:
+      //   cách 1
+
+      //   console.log(prompt("Vui lòng nhập tên của bạn: "));
+
+      //bien
+      //   cach khai bao bien
+      //   var age = 23;
+      //   //   var: tu khóa khai báo biến
+      //   // age: định dang ra tên biến ==> camelCase(con lạc đà)
+      //   // nếu như là 1 từ thì viết chữ thường còn 2 từ trở lên mới viết theo kiểu camlCase
+      //   // = là phép gán (đang thực hiện việc gán cho 1 cái gì đó cho tên biến của mình)
+      //   // 23: giá trị( kiểu dữ liệu) ddwwojc gán vào cho tên biến
+
+      //   console.log("khai báo với từ khóa var chưa được ghi đè:", age);
+      //   // bài tập: lấy dữ liệu từ người dùng về sở thích các món ăn, địa điểm du lịch  => lưu trữ nó và hiển thị nó qua popup
+
+      //   //   var monAn = prompt("Nhap vao mon an yeu thich cua ban: ");
+      //   //   var duLich = prompt("Nhap vao dia diem ban thich");
+
+      //   //   alert(monAn);
+      //   //   alert(duLich);
+
+      //   //ghi đè
+      //   age = 50;
+      //   console.log("khai báo với từ khóa var đã được ghi đè:", age);
+      //   //   khai báo lại
+      //   var age = 18;
+      //   console.log("khai báo với từ khóa var đã được khai báo lại:", age);
+
+      //let
+      //   let lopHoc = "JS230529";
+      //   console.log("Khai bao bien voi let luc bat dau", lopHoc);
+      //   lopHoc = "JS230629";
+      //   console.log("Khai bao bien voi let luc duoc ghi de:", lopHoc);
+      //   let lopHoc = "Khong co lop hoc";
+      //   console.log("Khai bao bien voi let luc duoc khai bao lai", lopHoc);
+      //   //   const
+      //   const gender = "NAM";
+      //   console.log("Khai bao bien voi tu khoa const", gender);
+
+      //   gender = "NU";
+      //   console.log("Khai bao bien voi const luc duoc ghi de", gender);
+
+      //   const gender = "BEDE";
+      //   console.log("Khai bao bien voi const luc duoc khai bao lai", gender);
+
+      //   var, let, const
+      // var: khai báo lại được, ghi đè lại được
+      // let: ghi đè lại được, nhưng không khai báo lại được
+      // const: k cho ghi đè cũng k cho khai báo lại
+
+      //   kiểu dữ liệu
+      // String => một đoạn chuỗi được bọc dấu nháy đơn hoặc dấu huyền
+      //   let name = "Nguyen Khac Tai";
+      //   console.log("Kiểu dữ liệu string trong nháy đôi", name);
+
+      //   let name2 = "Nguyen Khac Tai2";
+      //   console.log("Kiểu dữ liệu String trong nháy đơn", name2);
+
+      //   let name3 = `Nguyen Khac Tai3`;
+      //   console.log("Kiểu dữ liệu String trong nháy huyền", name3);
+
+      //   //Kiểu number => những con số
+      //   let age = 23;
+      //   console.log("age", typeof age);
+      //   let luckNumber = 9;
+      //   console.log("luckNumber", typeof luckNumber);
+
+      // Toán tử
+
+      // Toán tử số học + - * / %
+      //   Cho phép ngowif dùng nhập vào 2 con số tính tổng 2 con số đó
+
+      //   let number1 = +prompt("nhap vao so dau tien:");
+      //   let number2 = +prompt("nhap vao so thu 2:");
+      //   let result = number1 + number2;
+      //   alert("ket qua khi cong hai so voi nhau " + result);
+
+      //  baitap nhap vao nam sinh cua ban vaf nhap vao nam hien tai tinh so tuoi cua ban
+      //   let namSinh = +prompt("Nhap vao nam sinh cua ban");
+      //   let hienTai = +prompt("Nhap vao nam hien tai");
+      //   let soTuoi = hienTai - namSinh;
+      //   alert("So tuoi cua ban la" + soTuoi);
+
+      // baitap: cho hai con so 9 va 17(hay tinh tong, tinh so du cua hai so tren va hien thi)
+
+      //   let number1 = +prompt("Nhap vao so 9");
+      //   let number2 = +prompt("Nhap vao so 17");
+      //   console.log(" So du cua number 1 la", number1 % 2);
+      //   console.log(" So du cua number 2 la", number2 % 2);
+
+      //   let result = number;
+
+      //Bài 1: Viết chương trình nhập điểm của một sinh viên cho các môn: Vật lý, Hóa học, và Sinh học.
+      //   Sau đó hiển thị điểm trung bình và tổng của những điểm này.
+      //   let vatLy = +prompt("nhap diem vat ly");
+      //   let hoaHoc = +prompt("Nhap diem hoa hoc");
+      //   let sinhHoc = +prompt("nhap diem sinh hoc");
+      //   let tongDiem = vatLy + hoaHoc + sinhHoc;
+      //   let diemTrungBinh = (vatLy + hoaHoc + sinhHoc) / 3;
+      //   alert("Tong so diem la" + tongDiem);
+      //   alert("diem trung binh cua 3 mon la" + diemTrungBinh);
+
+      //   Bài 2: Viết chương trình nhập một giá trị là độ 0C (Celsius) và chuyển nó sang độ 0F (Fahrenheit).
+      //   C/5 = (F-32)/9
+      //   let C = parseInt(prompt("nhap do C"));
+      //   let F;
+      //   F = 32 + (C * 9) / 5;
+      //   console.log("do f la :", F);
+
+      // bài 3: tính BMI chỉ số sức khỏe
+
+      //   let canNang = prompt("Nhap can nang cua ban");
+      //   let chieuCao = prompt("Nhap chieu cao cua ban");
+      //   let bmi = canNang / (chieuCao * 2);
+      //   alert("chi so bmi cua ban la" + bmi);
+
+      // kiểu dữ liệu boolean luôn có 2 giá trị là true hoặc false
+      //   const isTai = true;
+      //   console.log("Tai co dep trai khong", isTai);
+      //   const isTu = false;
+      //   console.log("Tu co dep trai khong", isTu);
+
+      //   console.log("Kieu du lieu cua thang tren la", typeof isTai, typeof isTu);
+
+      //   trong javascript lamf sao ma phan biet duoc cai nao dung cai nao sai
+      // đi tìm những thằng falsy
+
+      // truthy và falsy
+      /* những giá trị falsy
+            - 0
+            - ""
+            - null
+            -undifined
+            - NaN
+            - false
+            - -0
+            - 0n
+            - document.all
+            ngoai nhung cai nay thi deu la truthy
+            */
+      //    toan tu so sanh
+      // > >= < <= == ===
+
+      //   let diemToanTai = +prompt("diem thi toan vao lop 10 cua Tai");
+      //   let diemToanTu = +prompt("diem thi Toan vao lop 10 cua Tu");
+      //   let result = diemToanTai >= diemToanTu;
+      //   console.log("Diem toan cua Tai co hon diem toan cua Tu khong", result);
+      //   console.log("Kieu du lieu cua result la:", typeof result);
+
+      //   console.log(5 == "5"); // true vi so sanh tuong doi 5 5 voi nhau
+      //   console.log(5 === "5"); // false vi so sanh tuyet doi so sanh number voi string k the bang nhau
+
+      // toan tu logic biểu thức điều kiện
+      // ||(hoặc) => tương đối, tức là chỉ cần 1 thằng đúng thì sẽ trả về kết quả cuối cùng là true
+      // &&(và) => tuyệt đối, tức là cả 2 về đều true thì mới là true, còn chỉ cần 1 thằng false thì sẽ là false
+      //  ! => đảo ngược giá trị ban đầu, true => false, false => true, trường hợp sử dụng ban đầu tức là mình muốn
+      //   cái đấy thành flase
+      //   let isHanhIT = true;
+      //   let isHanhMasterEnglish = true;
+
+      //   console.log(
+      //     " Chị Hạnh có thể có thu nhập cao hay không?",
+      //     !isHanhIT && isHanhMasterEnglish
+      //   );
+
+      //   biểu thức điều kiện
+
+      // (a > b && b == 1)
+      // biểu thức điều kiện luôn trả về mọi người kiểu dữ liệu boolean có hai giá trị là true, false
+
+      //   Cấu trúc câu điều kiện( mệnh đề if else)
+      //   let inputNumber = +prompt(
+      //     "Nhap vao tu 1 den 10 de lay duoc con so may man"
+      //   );
+
+      //   if (inputNumber == 5) {
+      //     // thực hiện cái gì đó trong đây
+      //     alert("bạn đã trúng thưởng được con số may mắn");
+      //   } else {
+      //     // thực hiện cái gì đó trong đây
+      //     alert("chúc bạn may mắn lần sau");
+      //   }
+      //   if ==> nếu
+      //  () => biểu thức điều kiện  => chỉ trả về kết quả là true hoặc false
+      // {..} => thực hiện logic của mình trong đây khi mà điều kiện thỏa mãn
+      // else ==> là trường hợp ngược lại
+      // {.. } thực hiện logic khi mà điều kiện không thỏa mãn
+
+      //   bài tập: lấy thông tin tuổi từ người dùng nhập vào. Hãy kiểm tra nếu như mà tuổi
+      // của họ lớn hơn 18t thì mới được kết hôn không thì sẽ vào tù
+      // bài tập 2: lấy thông tin độ đẹp trai hoặc độ xinh gái của mình và hiển thị ra nếu
+      // đẹp trai xinh gái thì hiển thị có cơ hội lấy chồng đại gia, chui vào chạn không thì
+      // cố gắng học lập trình
+      /*bài tập 3: cho phép người dùng nhập vào một số, kiểm tra số đấy là chẵn hay không,
+          nếu không thì in ra số lẽ
+            */
+
+      // bai 1
+      //   let nhapTuoi = +prompt("Nhap so tuoi cua ban");
+      //   if (nhapTuoi >= 18) {
+      //     alert("Ban da du tuoi lay vo");
+      //   } else {
+      //     alert("Ban co co hoi vao tu ");
+      //   }
+
+      // bai2
+      //   let doDepTrai = +prompt("Nhap vao so diem dep trai thang diem 10");
+      //   if (doDepTrai > 5) {
+      //     alert(" dep trai xinh gai day");
+      //   } else {
+      //     alert("hoc lap trinh di, xau qua");
+      //   }
+
+      // bai 3
+      //   let soChan = +prompt("Nhap vao 1 so bat ki");
+      //   if (soChan % 2 == 0) {
+      //     alert("Day la so chan");
+      //   } else {
+      //     alert("so le roi");
+      //   }
+
+      // cac dang if else
+      // dạng thứ 2: chỉ có if
+      // ví dụ
+      //   let tai = "au";
+      //   if (tai == giau) {
+      //     console.log("Tai giau thiet");
+      //   }
+      // Dạng nhiều if, if else
+      //   let tai = prompt("Ban da tan do ai");
+      //   if (tai == "tan do Dung") {
+      //     alert("Tai da co duoc Dung");
+      //   } else if (tai == "tan do Diep") {
+      //     alert("Tai da co duoc diep");
+      //   } else if (tai == " tan do Hoa") {
+      //     alert("Tai da co duoc hoa");
+      //   } else {
+      //     alert("Xung dang e");
+      //   }
+
+      //   let a = +prompt("Nhap so a de tinh phuong trinh bac nhat");
+      //   let b = +prompt("nhap vao so b de tinh phuong trinh bac nhat");
+      //   let x = -b / a;
+      //   if (a == 0 && b == 0) {
+      //     alert("phuong trinh vo so nghiem");
+      //   } else if (a == 0 && b != 0) {
+      //     alert("phuong trinh vo nghiem");
+      //   } else if (a != 0) {
+      //     alert("phuong trinh co nghiem la" + "" + x);
+      //   } else {
+      //     alert("Ong nhap lai giup con");
+      //   }
+
+      // cho phep nguoi dung nhap vao gioi tinh(co the co gioi tinh thu 3),
+      /*
+              age neu tren 18t thi nguoi dan ong truong thanh, phu nu quyen ru
+              duoi 18t thi con trai tre con, be gai de thuong
+          */
+
+      //   let gioiTinh = prompt("Nhap gioi tinh");
+      //   let tuoi = prompt("Nhap tuoi cua ban");
+      //   if (gioiTinh == "Nam" && tuoi >= 18) {
+      //     alert("dep trai va tren 18t");
+      //   } else if (gioiTinh == "Nu" && tuoi >= 18) {
+      //     alert("xinh gai va tren 18t");
+      //   }
+      //   if (gioiTinh == "Nam" && tuoi < 18) {
+      //     alert("nam ma tre con");
+      //   } else if (gioiTinh == "Nu" && tuoi < 18) {
+      //     alert("be gai de thuong duoi 18t");
+      //   }
+
+      /* ------------if else long nhau---------------*/
+      //   let gender = prompt("Nhap gioi tinh");
+      //   let age = prompt("Nhap tuoi cua ban");
+
+      //   if (age >= 18) {
+      //     if (gender == "nam") {
+      //       alert("Ban la nam tren 18t");
+      //     } else if (gender == "nu") {
+      //       alert("ban la nu tren 18t");
+      //     } else if (gender == "bede") {
+      //       alert("ban la bede tren 18t");
+      //     }
+      //   } else {
+      //     if (gender == "nam") {
+      //       alert("Ban la nam duoi 18t");
+      //     } else if (gender == "nu") {
+      //       alert("ban la nu duoi 18t");
+      //     } else if (gender == "bede") {
+      //       alert("ban la bede duoi tren 18t");
+      //     }
+      //   }
+
+      //   let canNang = +prompt("Nhap can nang cua ban");
+      //   let chieuCao = +prompt("Nhap chieu cao");
+      //   let bmi = canNang / (chieuCao * 2);
+      //   //   alert("chi so bmi cua ban la" + bmi);
+      //   if (bmi < 18.5) {
+      //     alert("ban dang thieu can");
+      //   } else if (bmi > 18.5 && bmi <= 24.9) {
+      //     alert("binh thuong");
+      //   } else if (bmi > 24.9 && bmi <= 29.9) {
+      //     alert("Tien beo phi");
+      //   }
+
+      //bai tap: kiem tra so chan so le va co chia het cho 2 5 10
+
+      let number = +prompt("Nhap so");
+      if(number % 2){
+        if(number % 2 == 0){
+            alert("so chan chia het cho 2")
+        }else if(number % 10 == 0)
+      }
+    </script>
+    <script src="./main.js"></script>
+  </body>
+</html>
