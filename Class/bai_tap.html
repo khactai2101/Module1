@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      fieldset {
+        border: 2px solid grey;
+        margin-bottom: 20px;
+        padding: 20px;
+      }
+      legend {
+        background-color: orange;
+        padding: 10px 20px;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <fieldset>
+      <legend>Bài tập 1</legend>
+      <pre>
+ Khai báo biến :
+        -firstName có giá trị là :Academy.
+        -lastName có giá trị là : Rikkei.
+        -fullName có giá trị là : Rikkei Academy.</pre
+      >
+      <!-- //khi hành động click chuột vào button thì sẽ gọi function bai_01 -->
+      <button onclick="bai_01()">Bài 1</button>
+    </fieldset>
+
+    <fieldset>
+      <legend>Bài tập 3</legend>
+      <pre>
+        Viết chương trình nhập điểm của một sinh viên cho các môn: Vật lý, Hóa học, và Sinh học.
+         Sau đó hiển thị tổng điểm và điểm trung bình 3 môn này.</pre
+      >
+      <!-- //khi hành động click chuột vào button thì sẽ gọi function bai_01 -->
+      <button onclick="bai_03()">Bài 3</button>
+      <p id="result-03"></p>
+    </fieldset>
+
+    <fieldset>
+      <legend>Bài tập 4</legend>
+      <pre>
+        Viết chương trình nhập một giá trị là độ 0C (Celsius) và chuyển nó sang độ 0F (Fahrenheit). 
+        [Hướng dẫn: C/5 = (F-32)/9].</pre
+      >
+      <!-- //khi hành động click chuột vào button thì sẽ gọi function bai_01 -->
+      <button onclick="bai_04()">Bài 4</button>
+      <p id="result-04"></p>
+    </fieldset>
+
+    <fieldset>
+      <legend>Bài tập 5</legend>
+      <pre>
+        Viết chương trình tính chu vi và diện tích hình chữ nhật.</pre
+      >
+      <button onclick="bai_05()">Bài 5</button>
+      <p id="result-05"></p>
+    </fieldset>
+
+    <fieldset>
+      <legend>Bài tập 6</legend>
+      <pre>Viết chương trình tính chu vi và diện tích hình tròn.</pre>
+      <button onclick="bai_06()">Bài 6</button>
+      <p id="result-06"></p>
+    </fieldset>
+
+    <fieldset>
+      <legend>Bài tập 7</legend>
+      <pre>Phân biệt “==” và “===”</pre>
+      <button onclick="bai_07()">Bài 7</button>
+      <p id="result-07"></p>
+    </fieldset>
+
+    <fieldset>
+      <legend>Bài tập 8</legend>
+      <h3>Tính tiền điện</h3>
+      <p>Các mức giá điện</p>
+      <table>
+        <tr>
+          <th>SỐ kWh sử dụng</th>
+          <th>Giá</th>
+        </tr>
+        <tr>
+          <td>0- 50</td>
+          <td>1700</td>
+        </tr>
+        <tr>
+          <td>51- 100</td>
+          <td>1800</td>
+        </tr>
+        <tr>
+          <td>101- 200</td>
+          <td>1900</td>
+        </tr>
+        <tr>
+          <td>201- 300</td>
+          <td>2000</td>
+        </tr>
+        <tr>
+          <td>301-400</td>
+          <td>2200</td>
+        </tr>
+        <tr>
+          <td>401 trở lên</td>
+          <td>2500</td>
+        </tr>
+      </table>
+
+      <button onclick="bai_08()">Nhập chỉ số điện</button>
+      <p id="result-08"></p>
+    </fieldset>
+
+    <fieldset>
+      <legend>Bài tập 9</legend>
+      <pre>          đồng hồ.</pre>
+      <button onclick="bai_09()">Bài 9</button>
+      <p id="result-09"></p>
+    </fieldset>
+
+    <fieldset>
+      <legend>Bài tập 10</legend>
+      <pre>nhập đồng hồ.</pre>
+      <button onclick="bai_10()">Bài 10</button>
+      <p id="result-10"></p>
+    </fieldset>
+
+    <fieldset>
+      <legend>Bài tập 11</legend>
+      <pre>nhập đồng hồ.</pre>
+      <button onclick="bai_11()">Bài 11</button>
+      <p id="result-11"></p>
+    </fieldset>
+    <script>
+      // Cú pháp: function + function_name + () +{ khối lệnh thực thi}
+      function bai_01() {
+        // chỉ được chạy khi đc gọi
+        // alert("Hello world");
+        const firstName = "Academy";
+        const lastName = "Rikkei";
+        const fullName = lastName + "" + firstName;
+        console.error("cảnh báo: ", fullName);
+      }
+
+      function bai_03() {
+        const chemistryMark = Number(prompt("Nhập vào điểm Hóa"));
+        const physicsMark = Number(prompt("Nhập vào điểm Lý"));
+        const biologyMark = Number(prompt("Nhập vào điểm Sinh"));
+        const totalgeMark = chemistryMark + physicsMark + biologyMark;
+        const averageMark = (totalgeMark / 3).toFixed(1);
+
+        //Truy vấn tới element
+        const resultElement = document.querySelector("#result-03");
+        console.log("element", resultElement);
+        resultElement.innerHTML =
+          "Tổng điểm của 3 môn là" +
+          totalgeMark +
+          " và điểm trung bình là" +
+          averageMark;
+      }
+
+      function bai_04() {
+        const doC = Number(prompt("nhap do C"));
+        let f;
+        f = doC * 1.8 + 32;
+        const resultElement = document.querySelector("#result-04");
+        console.log("element", resultElement);
+        resultElement.innerHTML = "do F la " + f;
+      }
+
+      function bai_05() {
+        const chieuDai = Number(prompt("nhap chieu dai"));
+        const chieuRong = Number(prompt("nhap chieu rong"));
+        const chuVi = 2 * (chieuDai + chieuRong);
+        const dienTich = chieuDai * chieuRong;
+
+        const resultElement = document.querySelector("#result-05");
+        console.log("element", resultElement);
+        resultElement.innerHTML =
+          "Chu vi hinh chu nhat la " +
+          chuVi +
+          " va dien tich hinh chu nhat la " +
+          dienTich;
+      }
+
+      function bai_06() {
+        const duongKinh = Number(prompt("nhap duong kinh hinh tron"));
+        const soPi = 3.14;
+        const chuVi = (duongKinh * 3.14).toFixed(1);
+        const dienTich = soPi * (duongKinh / 2) ** 2;
+
+        const resultElement = document.querySelector("#result-06");
+        console.log("element", resultElement);
+        resultElement.innerHTML =
+          "Chu vi hinh tron la " +
+          chuVi +
+          " va dien tich hinh tron la " +
+          dienTich;
+      }
+
+      function bai_07() {
+        let a = 5;
+        let b = "5";
+        console.log(a == b);
+        console.log(a === b);
+        console.log(a != b);
+        console.log(a !== b);
+      }
+      function bai_08() {
+        const electricPower = Number(prompt("Nhap so dien thang nay"));
+        let money;
+        const rank_1 = 50 * 1700;
+        const rank_2 = rank_1 + 50 * 1800;
+        const rank_3 = rank_2 + 100 * 1900;
+        const rank_4 = rank_3 + 100 * 2000;
+        const rank_5 = rank_4 + 100 * 2200;
+        if (electricPower <= 50) {
+          money = electricPower * 1700;
+        } else if (electricPower <= 100) {
+          money = (electricPower - 50) * 1800 + rank_1;
+        } else if (electricPower <= 200) {
+          money = (electricPower - 100) * 1900 + rank_2;
+        } else if (electricPower <= 300) {
+          money = (electricPower - 200) * 2000 + rank_3;
+        } else if (electricPower <= 400) {
+          money = (electricPower - 300) * 2200 + rank_4;
+        } else {
+          money = (electricPower - 400) * 2500 + rank_5;
+        }
+
+        //   format
+        // truy vấn tới element
+        const resultElement = document.querySelector("#result-08");
+
+        resultElement.innerHTML =
+          "Tiền điện cần phải trả là:" + money.toLocaleString() + "VND";
+      }
+
+      function bai_09() {
+        // truy vấn đến
+        const resultElement = document.querySelector("#result-09");
+        // setInterval (function thực thi, 1000) --> function sẽ được thực thi sau thời gian bao nhiêu mili giây
+        setInterval(function () {
+          resultElement.innerHTML = new Date();
+        }, 1000);
+        setTimeout(function () {
+          console.log("hello world");
+        }, 3000);
+      }
+
+      function bai_10() {
+        const minus = Number(prompt("Nhap vao so phut can dem nguoc"));
+        const resultElement = document.querySelector("#result-10");
+        const milisecond = minus * 60 * 1000;
+
+        setTimeout(renderCountDown, milisecond);
+
+        function renderCountDown() {
+          resultElement.innerHTML = "<h1>Het gio</h1>";
+        }
+      }
+
+      function bai_11() {
+        const minus = Number(prompt("Nhập vào số phút cần đếm ngược"));
+        const resultElement = document.querySelector("#result-11");
+        let totalSecond = minus * 60; // mỗi giây lại giảm 1 lần
+        if (minus > 60 || minus < 0) {
+          return alert("Nhap so phut trong khoang tu 0 - 60p");
+        }
+        setInterval(renderCountDown, 1000);
+        function renderCountDown() {
+          totalSecond--;
+          const hourElement = parseInt(totalSecond / 3600);
+          const minusRender = parseInt(totalSecond / 60); // -> lay so phut
+          const secondRender = totalSecond % 60;
+          resultElement.innerHTML =
+            hourElement + ":" + minusRender + ":" + secondRender;
+        }
+      }
+    </script>
+  </body>
+</html>
