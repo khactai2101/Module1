@@ -190,10 +190,57 @@ function bai_4() {
   const edge = Number(prompt("Vui long nhap canh hinh vuong"));
   let acreage = edge * edge;
 
-  if (edge === isNaN) {
-    alert("nhap lai di");
-  } else {
-    const resultElement = document.querySelector("#result-4");
-    resultElement.innerHTML = "chu vi hinh vuong la " + acreage;
-  }
+  const resultElement = document.querySelector("#result-4");
+  resultElement.innerHTML = "chu vi hinh vuong la " + acreage;
 }
+
+function bai_5() {
+  const chieuDai = Number(prompt("Nhap chieu dai"));
+  const chieuRong = Number(prompt("Nhap chieu rong"));
+  let dienTich = chieuDai * chieuRong;
+
+  const resultElement = document.querySelector("#result-5");
+  resultElement.innerHTML = "dien tich hinh chu nhat la " + dienTich;
+}
+
+function bai_6() {
+  const inputElement = document.querySelector("#temp");
+  console.log(1111, inputElement);
+  console.log("gia tri cua input", inputElement.value);
+  //   inputElement.className = "box-input";
+  //name, id, className, placeholder, style la nhung thuoc tinh cua element co the lay gia tri va thay doi
+
+  //   lay gia tri input
+  const tempValue = inputElement.value;
+  const F = tempValue * 1.8 + 32;
+
+  const resultElement = document.querySelector("#result-6");
+  resultElement.innerHTML =
+    "Nhiet do da chuyen doi: " + tempValue + " do C bang " + F + "do F";
+}
+function bai_7() {
+  // input: VND, gia thanh chuyen doi
+  // output: usd -> DOM input de hien thi
+
+  const usdValue = document.querySelector("#usd").value;
+  const vnd = usdValue * 23000;
+  //hien thi gia tri qua input
+  const vndElement = document.querySelector("#vnd");
+  vndElement.value = vnd.toLocaleString() + "VND";
+}
+//vong lap for
+// for (let i = 0; i < 100; i++) {
+//   if (i % 2 === 0) {
+//     console.log(i + " so chan");
+//   } else {
+//     console.log(i + " so le");
+//   }
+// }
+
+const number = Number(prompt("nhap so de tinh tong"));
+let sum = 0;
+
+for (let i = 0; i <= number; i++) {
+  sum = sum + i;
+}
+console.log(sum);
