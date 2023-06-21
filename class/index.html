@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Session 16 - Function</title>
+  </head>
+  <body>
+    <header>
+      <h1>Session 16 - Function</h1>
+    </header>
+    <main>
+      <section>
+        <h3>Lưu ý về Function</h3>
+        <pre>
+                - Function có tính tái sử dụng
+                - Function có tính chất hoisting
+                3. Function chỉ thực thi khối lệnh khi được gọi
+            </pre
+        >
+      </section>
+    </main>
+    <script>
+      // tính chất hoisting -> chạy qua script 1 lần và sẽ ghi nhận các function
+      //  Cách khai báo function
+      // function nameFunction(param1, param2){}
+
+      function sum(a, b) {
+        console.log("a", a, "b", b);
+        const sum = a + b;
+        // return -> trả về 1 kết quả cho function --> bất kỳ kiểu dữ liệu nào
+        // return -> trả về 1 kết quả cho function
+        return sum;
+        // console.log() không chạy sau return
+        console.log("hello");
+      }
+      sum(10, 20);
+      //   đặt 1 biến để hứng kết quả
+      const test = sum(20, 30);
+      console.log("ket qua sum", test);
+
+      const arr_1 = [1, 2];
+      console.log("arr 1", arr_1);
+
+      const arr_2 = arr_1;
+      arr_2[2] = 100;
+      console.log("arr 1 lan 2", arr_1);
+
+      //   cach xu ly cho array
+      // có dùng for + array mới
+      // co the dung concat, spread
+
+      const arr_3 = [];
+      for (let i = 0; i < arr_1.length; i++) {
+        arr_3[i] = arr_1[i];
+      }
+      console.log("arr 3", arr_3);
+
+      arr_3[3] = 50;
+      console.log("arr 1 lan 3", arr_1);
+      console.log("arr 3 lan 2", arr_3);
+
+      function getColor(color) {
+        console.log(color);
+      }
+      const testColor = getColor;
+      testColor("red");
+      console.log("kiem tra function", getColor("green"));
+      //   tao 1 function  bang cach khai bao bien
+      //   cach 1: truyen thong function nameFunction(){}
+      // cach 2 khai báo function
+      const calculateArea = function (r) {
+        return 3.14 * r * r;
+      };
+      //   cách 3 dùng IIFE
+      //   chi dung 1 lan duy nhat --> đóng gói thư viện
+      (function (color) {
+        const body = document.querySelector("body");
+        body.style.background = color;
+      })("green");
+
+      // cách 4: dùng arrow function
+      const getData = (data) => {
+        console.log(data);
+        return data;
+      };
+
+      const getData2 = (data) => data;
+
+      const getObject = () => {
+        return {};
+      };
+      const getObject2 = () => ({});
+      console.log("kiem tra", getObject(), getObject2());
+
+      //    bai toan: Tinh tong cac so nhap vao
+
+      function calculateSum(a, b, c) {
+        let sum = 0;
+        for (let index = 0; index < arguments.length; index++) {
+          sum += arguments[index];
+        }
+        return sum;
+      }
+
+      console.log(calculateSum(1, 2, 3));
+      console.log(calculateSum(1, 2, 3, 4, 45555555));
+
+      //   function khong ten
+      setTimeout(function () {
+        console.log("toi la function khong ten");
+      }, 3000);
+      // call back function nhận 1 function làm đối số trong 1 function
+
+      function x10(a) {
+        return a * 10;
+      }
+
+      function renderNumber(callFn, number) {
+        const x10 = callFn();
+        return x10 * number;
+      }
+
+      const result = renderNumber(x10, 8);
+
+      console.log("ket qua x10", result);
+    </script>
+  </body>
+</html>

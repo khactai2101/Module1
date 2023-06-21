@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      tr,
+      th {
+        border: 1px solid black;
+      }
+      th:nth-child(3) {
+        padding: 10px 50px;
+      }
+      th,
+      td {
+        padding: 10px 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <fieldset>
+      <legend>bai 1</legend>
+      <h3>Nhập vào chuỗi cách nhau bằng dấu phẩy để check số nguyên tố</h3>
+      <input type="text" id="input-1" placeholder="1,4,5,6,10" />
+      <button onclick="bai_1()">Bấm</button>
+      <div id="result_1"></div>
+    </fieldset>
+
+    <!-- <fieldset>
+      <legend>bai 2</legend>
+      <h3>Chuyển đổi giữa feet và meters</h3>
+
+      <table>
+          <thead>
+            <tr>
+              <th>Feet</th>
+              <th>Meters</th>
+              <th></th>
+              <th>Meters</th>
+              <th>Feet</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table> -->
+
+    <!-- <input type="text" id="input-2" />
+
+      <button onclick="footToMeter()">Foot to meter</button>
+      <button onclick="meterToFoot()">Meter to foot</button>
+      <div id="result_meter"></div>
+
+      <div id="result_foot"></div>
+    </fieldset> -->
+    <!-- ================== -->
+
+    <fieldset>
+      <legend>bai 3</legend>
+      <h3>Nhập vào độ dài</h3>
+      <input type="text" id="input-3" />
+      <button onclick="draw()">Bấm</button>
+      <div id="circle"></div>
+      <div id="square"></div>
+      <div id="rectangle"></div>
+    </fieldset>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
