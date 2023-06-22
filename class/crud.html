@@ -4,35 +4,71 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./css/style.css" />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      table,
+      tr,
+      td,
+      th {
+        border-collapse: collapse;
+      }
+      table tr:nth-child(even) {
+        background-color: rgba(184, 177, 177, 0.716);
+      }
+      td {
+        padding: 10px 20px;
+      }
+      tr td:first-child {
+        width: 70%;
+      }
+
+      section {
+        padding: 30px;
+        background-color: rgb(239, 237, 234);
+        width: 40%;
+        margin-bottom: 30px;
+      }
+      .input-add {
+        padding: 10px;
+      }
+      button {
+        background-color: green;
+      }
+    </style>
   </head>
   <body>
-    <h2>Add New Product</h2>
-
-    <div class="add_new_product">
-      <input type="text" name="" id="input_add" placeholder="New Product" />
-      <button class="btn-add" onclick="add()">Add</button>
+    <section>
+      <h3>Add new product</h3>
+      <input type="text" id="input-add" />
+      <button onclick="handleAdd()">Add</button>
+    </section>
+    <div>
+      <input type="text" id="input-update" />
+      <button id="btn-update">Update</button>
     </div>
 
-    <h2>Display All Product</h2>
+    <div>
+      <input type="text" id="input-search" />
+      <button onclick="handleSearch()">Search</button>
+    </div>
 
     <table>
-      <thead>
-        <tr>
-          <th>Product Name</th>
-          <th></th>
-          <th></th>
-          <th>0 product</th>
-        </tr>
-      </thead>
-      <tbody>
-        <!-- <tr>
-          <td>Sony Xperia</td>
-          <td><button class="btn-edit">Edit</button></td>
-          <td><button class="btn-delete">Delete</button></td>
-          <td></td>
-        </tr> -->
-      </tbody>
+      <tr>
+        <td>SP1</td>
+        <td><button>Edit</button> <button>Delete</button></td>
+      </tr>
+      <tr>
+        <td>SP1</td>
+        <td><button>Edit</button> <button>Delete</button></td>
+      </tr>
+      <tr>
+        <td>SP1</td>
+        <td><button>Edit</button> <button>Delete</button></td>
+      </tr>
     </table>
 
     <script src="./js/crud.js"></script>
