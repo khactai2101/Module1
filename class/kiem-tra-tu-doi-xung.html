@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <fieldset>
+      <legend>Kiem tra tu doi xung</legend>
+      <input type="text" id="isPalindrome" />
+      <span id="result"></span> <br />
+      <input type="button" onclick="isPalindrome()" value="bam" />
+    </fieldset>
+    <script>
+      function isPalindrome() {
+        const palindrome = document.querySelector("#isPalindrome").value;
+
+        // đặt first và last là vị trí đầu và cuối
+        let first = 0;
+        let last = palindrome.length - 1;
+        // while để xét last lớn hơn first mới tiếp tục
+
+        if (palindrome.length >= 2) {
+          while (last > first) {
+            if (palindrome[first] != palindrome[last]) {
+              alert("khong phai palindrome");
+              return false;
+            }
+            first++;
+            last--;
+          }
+          alert("day la palindrome");
+          return true;
+        } else {
+          alert("nhap nhieu len");
+        }
+      }
+    </script>
+  </body>
+</html>

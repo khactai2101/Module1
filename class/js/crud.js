@@ -57,8 +57,10 @@ function handleEdit(pro) {
   inputElement.value = pro;
 
   // trỏ tới nút button
-
   const setBtn = document.querySelector("#btn-update");
+
+  const inputUpdate = document.querySelector(".form-update");
+  inputUpdate.style.display = "block";
 
   //set thuoc tinh onclick cho nut button
   setBtn.setAttribute("onclick", `handleUpdate('${pro}')`);
@@ -81,4 +83,18 @@ function handleUpdate(pro) {
   //  truyen lại mảng , hiển thị ra màn hình, cập nhật mảng mới
   renderProduct(products);
 }
+
 // function search san pham
+// function handleSearch() {
+//   // lấy được value khi người nhập vào
+//   const searchValue = document.querySelector("#input-search").value;
+
+//   const productSearch = [];
+//   // so sánh kết quả
+//   for (const element of products) {
+//     if (element.toLowerCase().includes(searchValue.toLowerCase())) {
+//       productSearch.push(element);
+//     }
+//   }
+//   renderProduct(productSearch);
+// }
