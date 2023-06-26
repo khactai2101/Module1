@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Object</h1>
+    <script>
+      const person = {
+        name: "Nguyen Van A",
+        age: 18,
+        address: "DN",
+        doB: "12/10/2005",
+        gender: 0,
+      };
+      //   key: viet in thuong, viet lien` (giong' bien')
+      // value: String, number, array, function,
+      //   cach 1:
+      person.name;
+      // cach 2
+      person["name"];
+
+      console.log("kiem tra doi tuong", person);
+      console.log("kiem tra ten doi tuong", person.name);
+
+      //   Dùng for in để lấy từng key của object
+      for (const key in person) {
+        console.log("check key", key);
+        console.log("check value key", person[key]); // khi muốn lấy giá trị theo tên thuộc tính --> tên thuộc tính là 1 biến
+      }
+
+      //   Object là kiểu dữ liệu tham chiếu
+      const person2 = person;
+      person2.name = "Nguyen VAn B";
+      console.log(person2);
+      console.log(person);
+      //   spred --> copy noi dung cua object
+
+      const person3 = { ...person };
+      console.log("check person3", person3);
+
+      person3.name = "Nguyen Van C";
+      console.log("check person3 lan 2", person3);
+
+      console.log("check person3 lan 3", person);
+      console.log("check person3 lan 4", person2);
+
+      const number = [1, 2, 3, 4];
+      const number2 = [...number];
+      number2[1] = 100;
+      console.log(number, number2);
+
+      const animals = [
+        { id: 1, name: "kitty", weight: 2, gender: true, type: "cat" },
+        { id: 2, name: "Cún", weight: 5, gender: false, type: "dog" },
+      ];
+      const cat = animals[0];
+      cat.name = "hello kitty";
+      const animals2 = [...animals];
+
+      const cat2 = animals2[1];
+      animals2[1].type = "cat";
+      console.log(animals, animals2);
+
+      //   dung JSON
+      const animals3 = JSON.parse(JSON.stringify(animals));
+      animals3[1].name = "big dog";
+      console.log(animals, animals3);
+    </script>
+  </body>
+</html>

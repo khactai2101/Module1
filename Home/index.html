@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>JAVASCRIPT</h1>
+    <script>
+      //   const myInfo = {
+      //     name: "Nguyen Khac Tai",
+      //     age: 18,
+      //     address: "Da Nang",
+      //   };
+      //   myInfo.email = "nguyenkhactai1@gmail.com";
+      //   console.log(myInfo);
+
+      // Object constructor
+      function User(firtName, lastName, age) {
+        this.firtName = firtName;
+        this.lastName = lastName;
+        this.age = age;
+        this.getName = function () {
+          return `${this.firtName} ${this.lastName}`;
+        };
+      }
+      const author = new User("Tai", "Nguyen", 18);
+      const user = new User("Anh", "Nguyen", 19);
+      author.tiltle = "Thong tin";
+      user.comment = "dep qua";
+      console.log(author.getName());
+      console.log(user.getName());
+    </script>
+  </body>
+</html>

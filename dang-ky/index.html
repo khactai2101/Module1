@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="style.css
+    "
+    />
+  </head>
+  <body>
+    <!-- ----------FORM REGISTER------------ -->
+    <div id="form">
+      <h1>Form Đăng ký</h1>
+      <div class="form-input">
+        <label for="email">Email</label>
+        <input type="text" id="email" placeholder="Fill a email" />
+      </div>
+
+      <div class="form-input">
+        <label for="email">User name</label>
+        <input type="text" id="user-name" placeholder="Fill your user name" />
+      </div>
+      <div class="form-input">
+        <label for="password">Password</label>
+        <input type="password" id="password" />
+      </div>
+      <div class="form-input">
+        <label for="repeat-password">Repeat password</label>
+        <input type="password" id="repeat-password" />
+        <br />
+      </div>
+      <button onclick="handleRegister()">Register</button>
+    </div>
+    <!------------- FORM LOGIN--------- -->
+    <div id="form">
+      <div class="form-input">
+        <h1>Form Đăng nhập</h1>
+        <label for="emailLogin">Email</label>
+        <input type="text" id="emailLogin" placeholder="Fill a email" />
+      </div>
+
+      <div class="form-input">
+        <label for="passwordLogin">Password</label>
+        <input type="password" id="passwordLogin" />
+      </div>
+
+      <button onclick="handleLogin()">Login</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
