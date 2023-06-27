@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const imageProduct = {
+        author: "Tac gia A",
+        price: "350.000",
+        title: "Day la cuon sach hay",
+        getAuthor: function () {
+          return author;
+        },
+      };
+
+      console.log("img", imageProduct);
+
+      // cach 2
+      function ImageProduct(author, price, title) {
+        this.author = author;
+        this.price = price;
+        this.title = title;
+
+        this.getAuthor = function () {
+          return author;
+        };
+      }
+      const ImageProduct_2 = new ImageProduct(
+        "Tac gia B",
+        "400.000",
+        "Day la cuon sach hay 2"
+      );
+      console.log("img2", ImageProduct_2);
+
+      //   cách 3:
+      const ImageProduct_3 = new Object();
+      ImageProduct_3.author = "Tac gia C";
+      ImageProduct_3.price = "450.000";
+      ImageProduct_3.title = "Day la cuon sach hay 3";
+      console.log("img3", ImageProduct_3);
+
+      //   cách 4
+      class ImageProduct_class {
+        constructor(author, price, title) {
+          this.author = author;
+          this.price = price;
+          this.title = title;
+        }
+      }
+      const imageProduct_4 = new ImageProduct_class(
+        "Tac gia D",
+        "500.000",
+        "Day la cuon sach hay 4"
+      );
+      console.log("img4", imageProduct_4);
+
+      //   Cách 2 : dùng constructor function
+      function Product(id, name, price) {
+        // khai bao thuoc tinh
+        this.id = id;
+        this.name = name;
+        this.price = price;
+        // Khai bao hanh vi
+        this.getPrice = function () {
+          return this.price;
+        };
+
+        this.setPrice = function (value) {
+          {
+            this.price = value;
+          }
+        };
+      }
+      const samsungNote10 = new Product("SSN10", "Samsung Note 10", 12000000);
+      const price = samsungNote10.getPrice();
+
+      samsungNote10.setPrice(10000000);
+      console.log("kiem tra price", price, samsungNote10);
+    </script>
+  </body>
+</html>

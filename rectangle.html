@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Rectangle {
+        constructor(width, height) {
+          this.width = width;
+          this.height = height;
+        }
+        getAcreage() {
+          return this.width * this.height;
+        }
+        getPerimeter() {
+          return 2 * (this.width + this.height);
+        }
+        setWidth(width) {
+          return this.width;
+        }
+        setHeight(height) {
+          return this.height;
+        }
+      }
+      const width = Number(prompt("nhap chieu rong"));
+      const height = Number(prompt("nhap chieu cao"));
+
+      const rectangle = new Rectangle(width, height);
+      const acreage = rectangle.getAcreage();
+
+      const perimeter = rectangle.getPerimeter();
+
+      console.log(this.acreage);
+      console.log(this.perimeter);
+
+      //   Rectangle(width, height);
+      //   console.log(Rectangle.getAcreage);
+    </script>
+  </body>
+</html>

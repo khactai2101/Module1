@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Session 18- Object</title>
+  </head>
+  <body>
+    <script>
+      // Có 4 cách để khai báo/ khởi tạo 1 đối tượng
+      // Cách 1: object liberal
+
+      const student = {
+        // khai báo thuộc tính -- đặc điểm
+        studentCode: "SV01",
+        name: "Nguyễn Văn A",
+        age: 18,
+        address: "Cẩm lệ - Đà Nẵng",
+        // khai báo hành vi
+        study: function () {
+          return "Learn with Rikkei Academy";
+        },
+        play: function () {
+          return "Play guitar";
+        },
+      };
+      console.log("s1", student);
+
+      //   Cách 2: Khai báo bằng constructor function
+      function Student(studentCode, name, age, address) {
+        this.studentCode = studentCode;
+        this.name = name;
+        this.age = age;
+        this.address = address;
+
+        // khai báo hành vi
+        this.study = function () {
+          return "Learn with Rikkei Academy";
+        };
+        this.play = function () {
+          return "Play guitar";
+        };
+      }
+      //   Tạo đối tượng student
+      const student_2 = new Student(
+        "SV02",
+        "Nguyễn Văn B",
+        20,
+        "Điện Bàn- Quảng Nam"
+      );
+      console.log("s2", student_2.study());
+
+      //   Cách 3: Object
+      const student_3 = new Object();
+      student_3.name = "Nguyen Van C";
+      student_3.age = 21;
+      console.log("student 3", student_3);
+
+      //   Cách 4: Class
+      class Student_Class {
+        constructor(studentCode, name, age, address) {
+          this.studentCode = studentCode;
+          this.name = name;
+          this.age = age;
+          this.address = address;
+        }
+        // Khai báo hành vi
+        study() {
+          return "Learn with Rikkei Academy";
+        }
+        play() {
+          return "Play guitar";
+        }
+      }
+      //   Khởi tạo student 4
+      const student_4 = new Student_Class(
+        "SV04",
+        "Nguyễn Văn D",
+        20,
+        "Hải Châu"
+      );
+      console.log("student 4", student_4);
+
+      const student_5 = new Student(
+        "SV07",
+        "Nguyen Van F",
+        20,
+        "Dien ban - Quang Nam"
+      );
+      console.log("s5", student_5);
+
+      const student_6 = student_5;
+      student_6.age = 30;
+      student_6.gender = true;
+
+      console.log("student 5 after", student_5);
+
+      //   cách copy object
+      const student_7 = { ...student_5 };
+      student_7.name = "Hello World";
+
+      //   Cachs 2: Dùng JSON
+      // JSON.parse --> chuyển kiểu JSON về kiểu ban đầu của nó
+      // JSON.stringify --> chuyển dữ liệu ban đầu thành kiểu JSON
+      const student_8 = JSON.parse(JSON.stringify(student_5));
+
+      //   Cách 3: assign --> object --> gộp key
+      const student_9 = Object(student_5, {});
+      console.log("S9", student_9);
+
+      //   Truy xuất dữ liệu và gán đồi tượng
+      // Cách 1: obj.key
+      student_9.name = "Nguyễn Văn N";
+
+      // Cách 2: obj["key"]
+      const keyName = "age";
+      student_8[keyName] = 60;
+      student_8.keyName = 70;
+      console.log("student 8", stu);
+
+      //   Truy xuất dữ liệu và gán đối tượng
+      const studentName = student_9.name;
+
+      console.log("name", studentName);
+    </script>
+  </body>
+</html>
