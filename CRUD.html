@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="inputData()">Click ddeer nhaapj</button>
+    <script>
+      const courses = []; //tạo 1 biến global để chứa các thông tin
+      // nguoi dung nhap thong tin vao va check dieu kien
+      function inputData() {
+        const type = prompt("Nhập C,R,U,D,E để thêm đọc sửa xóa dữ liệu");
+        if (type === "C") {
+          create();
+          // function create
+        } else if (type === "U") {
+          // function update
+        } else if (type === "R") {
+          // function read
+        } else if (type === "D") {
+          // function delete
+        } else if (type === "E") {
+          // function vong lap
+        } else {
+          alert("Nhap sai, vui long nhap lai CRUDE");
+        }
+      }
+
+      function create() {
+        // Nhập thông tin
+        const courseName = prompt("Nhap ten mon hoc");
+        const courseStatus = prompt("Nhap trang thai mon hoc", true);
+
+        // Nếu courseStatus = true thì trả về true nếu k thì trả về false
+        const convertBoolean = courseStatus === "true" ? true : false;
+
+        // Tạo 1 khóa học mới
+
+        const newCourse = new courses(courseName, convertBoolean);
+      }
+      // Thêm dữ liệu vào DB
+      courses.push(newCourse);
+      console.log("kiem tra db", courses);
+
+      //tạo mô hình 1 môn học
+
+      function read() {
+        courses.forEach((course) =>
+          console.log(
+            "Ten khoa hoc" + course.name + " va trang thai" + course.status
+          )
+        );
+      }
+
+      function Course(name, status) {
+        this.name = name;
+        this.status = status;
+      }
+    </script>
+  </body>
+</html>

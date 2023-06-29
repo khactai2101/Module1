@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let courses = [];
+
+      function addCourse() {
+        let course = {};
+        course.name = prompt("Nhập tên khóa học:");
+        course.completed =
+          prompt("Nhập trạng thái hoàn thành (đúng/sai):") === "đúng";
+        courses.push(course);
+        console.log("Đã thêm khóa học mới:");
+        displayCourses();
+      }
+
+      function displayCourses() {
+        console.log("Danh sách khóa học:");
+        for (let i = 0; i < courses.length; i++) {
+          console.log(`Khóa học ${i + 1}:`);
+          console.log(`Tên: ${courses[i].name}`);
+          console.log(
+            `Trạng thái hoàn thành: ${
+              courses[i].completed ? "Đã hoàn thành" : "Chưa hoàn thành"
+            }`
+          );
+        }
+      }
+
+      function updateCourse() {
+        let index = prompt("Nhập vị trí khóa học muốn cập nhật:") - 1;
+        if (index >= 0 && index < courses.length) {
+          let newName = prompt("Nhập tên khóa học mới:");
+          let newCompleted =
+            prompt("Nhập trạng thái mới (đúng/sai):") === "đúng";
+          courses[index].name = newName;
+          courses[index].completed = newCompleted;
+          console.log("Đã cập nhật khóa học:");
+          displayCourses();
+        } else {
+          console.log("Không tìm thấy khóa học để cập nhật.");
+        }
+      }
+
+      function deleteCourse() {
+        let index = prompt("Nhập vị trí khóa học muốn xóa:") - 1;
+        if (index >= 0 && index < courses.length) {
+          courses.splice(index, 1);
+          console.log("Đã xóa khóa học:");
+          displayCourses();
+        } else {
+          console.log("Không tìm thấy khóa học để xóa.");
+        }
+      }
+
+      function main() {
+        let choice;
+        do {
+          choice = prompt("Nhập lựa chọn (C/R/U/D/E):").toUpperCase();
+          switch (choice) {
+            case "C":
+              addCourse();
+              break;
+            case "R":
+              displayCourses();
+              break;
+            case "U":
+              updateCourse();
+              break;
+            case "D":
+              deleteCourse();
+              break;
+            case "E":
+              console.log("Cảm ơn bạn đã đến với Rikkei Academy");
+              break;
+            default:
+              console.log("Lựa chọn không hợp lệ.");
+              break;
+          }
+        } while (choice !== "E");
+      }
+
+      main();
+    </script>
+  </body>
+</html>
