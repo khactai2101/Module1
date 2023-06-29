@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <fieldset>
+      <legend>Bai 5</legend>
+      <h3>Vi du Class</h3>
+      <button onclick="bai_05()">Bam</button>
+    </fieldset>
+    <script>
+      function bai_05() {
+        class Person {
+          constructor(name, age, gender, hobbies) {
+            this.name = name;
+            this.age = age;
+            this.gender = gender;
+            this.hobbies = hobbies;
+          }
+        }
+        class User extends Person {
+          constructor(name, age, gender, hobbies, email, password) {
+            super(name, age, gender, hobbies);
+            this.email = email;
+            this.password = password;
+          }
+          getInfo = () => ({
+            name: this.name,
+            age: this.age,
+            gender: this.gender,
+            hobbies: this.hobbies,
+          });
+          getAccount = () => ({ email: this.email, password: this.password });
+        }
+
+        const person = new Person("Nguyễn Văn A", 20, true, "game");
+        const user = new User(
+          "Nguyễn Văn B",
+          21,
+          false,
+          "guitar",
+          "tai@gmail.com",
+          "123456"
+        );
+        console.log("kiem tra Person", person);
+        console.log("Kiem tra User", user);
+      }
+
+      // Tạo 2 mô hình đối tượng Animal có thuôc tính weight, speed, food, type...Pet có thuộc tính kế thừa từ Animal và có thêm thuộc tính name, hobbies
+
+      class Animal {
+        constructor(weight, speed, food, type) {
+          this.weight = weight;
+          this.speed = speed;
+          this.food = food;
+          this.type = type;
+        }
+      }
+      class Pet extends Animal {
+        constructor(weight, speed, food, type, name, hobbies) {
+          super(weight, speed, food, type);
+          this.name = name;
+          this.hobbies = hobbies;
+        }
+      }
+      const dog = new Pet(30, "40km/h", "cơm", "ăn tạp", "Tú", "Ngủ");
+      console.log("kiem tra", dog);
+    </script>
+  </body>
+</html>

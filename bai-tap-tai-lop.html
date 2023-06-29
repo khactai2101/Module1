@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const data = [
+        ["a", "b"],
+        ["c", "d", "e"],
+        ["f", "n", "m"],
+      ];
+
+      //   cach su dung reduce nhu kieu 1 vòng lặp duyệt qua xong concat gộp lại mảng
+      const newData = data.reduce((pre, item) => pre.concat(item), []);
+
+      //  cach su dung spread tạo ra rỗng xong concat gộp data đc copy từ mảng có sẵn
+      const newData2 = [].concat(...data);
+      console.log("kiem tra data111111", newData2);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="sum()">submit</button>
+
+    <fieldset>
+      <legend>Bai 4</legend>
+      <h3>tao store</h3>
+      <button onclick="bai_04()">Bam</button>
+    </fieldset>
+
+    <script>
+      // Có mảng sinh viên
+      const student = [
+        {
+          id: "SV01",
+          name: "Nguyen Van A",
+          address: "DN",
+          gender: true,
+          class: "RA_01",
+        },
+        {
+          id: "SV02",
+          name: "Nguyen Van A",
+          address: "DN",
+          gender: true,
+          class: "RA_01",
+        },
+        {
+          id: "SV03",
+          name: "Nguyen Van A",
+          address: "DN",
+          gender: true,
+          class: "RA_01",
+        },
+      ];
+
+      //   đổi thông tin địa chỉ của sinh vien : SV03
+
+      //
+      const newArray = student.map((item) => {
+        if (item.id == "SV03") {
+          return {
+            // map() tra ve 1 mảng giữ hết tất cả các item và thay đổi address
+            ...item,
+            address: "can tho",
+            name: "Nguyen Van B",
+          };
+          //   nếu không có id la sv03 thì trả về lại item
+        } else {
+          return item;
+        }
+      });
+      console.log("student sau khi thay thoi", newArray);
+      //   Viet ham tinh tong cua 3 so nhap
+
+      //   cách 1:
+      //   let sum = 0;
+      //   let input = prompt("Nhập một số (nhập 'x' để kết thúc):");
+
+      //   while (input !== "x") {
+      //     sum += input;
+      //     input = prompt("Nhập một số (nhập 'x' để kết thúc):");
+      //   }
+
+      //   console.log("Tổng là: " + sum);
+
+      //   cách 2:
+      //   spread
+      function sum(...numbers) {
+        let sum = 0;
+        for (let i = 0; i < numbers.length; i++) {
+          sum += numbers[i];
+        }
+        return sum;
+      }
+
+      const input = prompt("Nhập các số cách nhau bằng dấu cách:");
+      const numbers = input.split(" ").map(Number);
+      const totalSum = sum(...numbers);
+
+      console.log("Tổng là: " + totalSum);
+
+      // bai 3:
+
+      // bai4: Viết chương trình tạo store bằng cách thêm vào tên sản phẩm --> chuyển đổi thành mảng chứa sản phẩm đó và có một mã code tương ứng
+      // createStore inputProduct('samsung' ,'iphone', 'xiaomi')
+      //  --> [{id: "SP1", name: "samsung", quantity:20},{id: "SP2", name: "apple", quantity:20},{id: "SP2", name: "xiaomi", quantity:20}]
+      function bai_04() {
+        const products = [
+          { id: "", name: "", quantity: 20 },
+          { id: "", name: "", quantity: 20 },
+          { id: "", name: "", quantity: 20 },
+        ];
+
+        // spread
+        function createStore(...products) {
+          const store = [];
+          // Lặp qua sản phẩm để tạo thông tin đó
+          products.forEach((product, index) => {
+            const newProduct = {
+              id: "SP" + (index + 1),
+              name: product,
+              quantity: 20,
+            };
+            store.push(newProduct);
+          });
+          console.log(store);
+        }
+        createStore("Iphone 14", "Iphone 13", "Iphone 12", "Macbook", "Ipad");
+      }
+      //--------------------------------------------
+    </script>
+  </body>
+</html>

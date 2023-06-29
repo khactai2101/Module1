@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <fieldset>
+      <legend>Spread</legend>
+      <h3>Copy cac phan tu trong array hoac object</h3>
+      <button onclick="getSpread()">CLick</button>
+    </fieldset>
+    <fieldset>
+      <legend>Rest</legend>
+      <h3>Lay cac phan con lai</h3>
+      <button onclick="getRest()">CLick</button>
+    </fieldset>
+
+    <fieldset>
+      <legend>Destructuring</legend>
+      <h3>Lay cac phan con lai</h3>
+      <button onclick="getDestructuring()">CLick</button>
+    </fieldset>
+    <script>
+      // tham số mặc định
+      function sum(a, b = 0) {
+        // khi b không được truyền vào khi gọi gọi hàm hoặc b băng undefinded
+        return a + b;
+      }
+      const sumNumber = sum(1);
+      console.log("kiem tra ", sumNumber);
+
+      function renderData(data = []) {
+        data.forEach((element) => {
+          console.log("Element", element);
+        });
+      }
+      renderData();
+      function getSpread() {
+        const number = [1, 4, 5, 7];
+        //   spread -->copy lại nội dung mảng hoặc object
+        number2 = [...number]; //bọc lại array hoặc object tương ứng
+        number2[1] = 1000;
+        console.log("number", number, "number2", number2);
+      }
+
+      //   rest --> lấy phần còn lại
+      function getRest() {
+        function sumData(a, b, ...other) {
+          // arguments
+          console.log("kiem tra a", a);
+          console.log("kiem tra b", b);
+          console.log("other ", other);
+        }
+        sumData(1, 3, 5, 7, 8668, 8787, 768);
+
+        function sumNumbers(...data) {
+          let sum = 0;
+          for (let index = 0; index < data.length; index++) {
+            const number = data[index];
+            //   cong tung phan tu vao sum
+            sum += number;
+          }
+          return sum;
+        }
+        const sum_1 = sumNumbers(1, 2);
+        const sum_2 = sumNumbers(1, 3, 4, 6, 7);
+        console.log("ket qua sum_1", sum_1);
+        console.log("ket qua sum_2", sum_2);
+
+        function getStudent({ id, name, ...other }) {
+          console.log(id, name, other);
+        }
+        const student = {
+          id: 1,
+          name: "Nguyen van A",
+          age: 18,
+          address: "DN",
+          gender: true,
+        };
+        getStudent(student);
+      }
+
+      function getDestructuring() {
+        const student = { id: 1, name: "Nguyen van A", age: 18, address: "DN" };
+
+        const nameStudent = student.name;
+        const ageStudent = student.age;
+        const { addres, id } = student;
+
+        console.log("student", nameStudent, ageStudent, addres, id);
+        const animal = ["dog", "cat", "pig"];
+        const [a, b, c] = animal;
+      }
+    </script>
+  </body>
+</html>
