@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Làm việc với AJAX</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <table>
+    <tr>
+      <td>STT</td>
+      <td>Tên User</td>
+    </tr>
+  </table>
+  <body>
+    <script>
+      const api = "https://6270afdbe1c7aec428f6ada4.mockapi.io/user";
+
+      //   AJAX --> giống fetch trong js
+      // AJAX làm việc với API
+      const users = [];
+      $.get(api).done((res) => {
+        console.log("res", res);
+
+        users.push(...res);
+        console.log(users);
+      });
+
+      //   AJAX lam viec voi file
+      $.get("index.html").done((doc) => {
+        console.log("kiem tra file", doc);
+      });
+      const data = $(doc);
+      function render(data) {}
+    </script>
+  </body>
+</html>
