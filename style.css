@@ -1,0 +1,12 @@
+.item {
+  width: 100%;
+  height: 300px;
+  background-color: green;
+}
+img {
+  width: 80%;
+}
+
+[class*="col"] {
+  border: 2px solid orange;
+}

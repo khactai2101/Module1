@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+table,
+tr,
+td,
+th {
+  border-collapse: collapse;
+}
+table {
+  border: 3px solid grey;
+}
+th {
+  background-color: #e75912;
+  color: white;
+}
+table tr:nth-child(even) {
+  background-color: rgba(184, 177, 177, 0.716);
+}
+td,
+th {
+  padding: 10px 20px;
+}
+tr td:first-child {
+  width: 70%;
+}
+
+section {
+  padding: 10px;
+  margin-bottom: 10px;
+}
+#input-add {
+  outline: none;
+}
+#input-search {
+  outline: none;
+}
+.container {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.add-edit {
+  display: flex;
+  gap: 20px;
+}
+button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #1097eb;
+}
+td button:last-child {
+  background-color: #e72c2c;
+}
+input {
+  height: 25px;
+}
+
+.update {
+  display: none;
+}
