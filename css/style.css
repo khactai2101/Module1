@@ -1,0 +1,128 @@
+:root {
+  --color-primary: #1f2b6c;
+  --color-secondary: #159eec;
+  --color-accent: #bfd2f8;
+  --color-black: #212124;
+  --color-white: #fcfefe;
+}
+body {
+  font-size: 16px;
+  font-family: "Work Sans", sans-serif;
+}
+
+/* general css */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.container {
+  max-width: 992px;
+  margin: 0 auto;
+}
+.logo {
+  font-family: "Yeseva One", cursive;
+  font-size: 36px;
+  white-space: nowrap;
+  color: var(--color-primary);
+}
+.logo span {
+  color: var(--color-secondary);
+}
+.icon {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+}
+.icon-phone {
+}
+
+/* top bar CSS */
+.top-bar {
+  background-color: white;
+  padding: 19px 0;
+}
+.top-bar > * {
+  display: flex;
+  justify-content: space-between;
+
+  color: var(--color-primary);
+}
+.info {
+  display: flex;
+  gap: 20px;
+}
+.info-item {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-weight: 500px;
+}
+.info-item__content p:nth-child(1) {
+  color: var(--color-primary);
+}
+.info-item__content p:nth-child(2) {
+  color: var(--color-secondary);
+}
+/* Navbar */
+.navbar {
+  background-color: var(--color-primary);
+}
+.navbar > * {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 19px 0;
+}
+.navbar-menu {
+  display: flex;
+  padding: 19px 0;
+  list-style: none;
+  gap: 20px;
+  color: var(--color-white);
+}
+.navbar-menu li:nth-child(1) {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+.navbar-menu li {
+  font-weight: 400;
+}
+.icon-search {
+  width: 20px;
+  height: 20px;
+}
+.btn {
+  padding: 13px 35px;
+  border-radius: 50px;
+  background-color: var(--color-accent);
+  border: none;
+}
+.navbar-feature {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.banner__img {
+  height: 550px;
+}
+.banner__img img {
+  height: 100%;
+  object-fit: cover;
+}
+/* banner css */
+#banner {
+  position: relative;
+}
+.banner-content {
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 100%;
+}
